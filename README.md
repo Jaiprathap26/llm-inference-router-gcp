@@ -75,3 +75,6 @@ gcloud run deploy llm-router --source . --region REGION --no-allow-unauthenticat
 Deploy only with deliberate IAM, ingress, service account, Secret Manager, request timeout, concurrency, max instances, memory and distributed rate/spend limits. Enforce a raw HTTP request-body limit at the ingress: message limits here apply after JSON parsing. Dependencies are top-level pinned, not a hash-locked transitive supply chain; scan and lock them for your environment. Do not paste keys into command history; mount/inject managed secrets. The runtime runs as non-root, listens on `0.0.0.0:$PORT`, and uses one uvicorn process. Cache/metrics are per-instance and vanish on restart; Redis stores shared cached responses if configured. Cloud Run can scale to multiple instances, and infrastructure usage is billable. Validate container and staging deployment, streaming cancellation, provider compatibility, spend and latency in your environment before production.
 
 References: Google Cloud Run container contract https://cloud.google.com/run/docs/container-contract ; OpenAI Python streaming chunk schema https://github.com/openai/openai-python/blob/main/src/openai/types/chat/chat_completion_chunk.py .
+=======
+# llm-inference-router-gcp
+
